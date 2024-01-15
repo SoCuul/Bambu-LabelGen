@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="Generic-Spool" serif:id="Generic Spool" transform="matrix(3.749,0,0,3.749,-8078.71,-2926)">
+        <g id="Outer-Ring" serif:id="Outer Ring" transform="matrix(2.07769,0,0,2.07769,-2469.49,-988.288)">
+            <circle cx="2291.47" cy="917.043" r="65.731" style="fill:rgb(165,170,169);"/>
+        </g>
+        <g id="Background" transform="matrix(1.9436,0,0,1.9436,-2162.23,-865.325)">
+            <circle cx="2291.47" cy="917.043" r="65.731" style="fill:rgb(254,255,254);"/>
+        </g>
+        <g id="Inner-Ring" serif:id="Inner Ring" transform="matrix(1.13372,0,0,1.13372,-306.417,-122.628)">
+            <circle cx="2291.47" cy="917.043" r="65.731" style="fill:rgb(165,170,169);"/>
+        </g>
+        <g id="Right-Label" serif:id="Right Label" transform="matrix(0.595075,0,0,0.656846,936.963,341.305)">
+            <path d="M2464.41,875.54L2464.41,877.498C2464.41,881.194 2461.1,884.194 2457.02,884.194L2425.7,884.194C2421.62,884.194 2418.31,881.194 2418.31,877.498L2418.31,875.54C2418.31,871.844 2421.62,868.844 2425.7,868.844L2457.02,868.844C2461.1,868.844 2464.41,871.844 2464.41,875.54Z" style="fill:rgb(165,170,169);"/>
+        </g>
+        <g id="Bottom-Label" serif:id="Bottom Label" transform="matrix(0.608239,0,0,0.627301,914.723,360.705)">
+            <path d="M2298.25,1049.34L2298.25,1060.48C2298.25,1061.93 2297.03,1063.11 2295.54,1063.11L2231.44,1063.11C2229.94,1063.11 2228.72,1061.93 2228.72,1060.48L2228.72,1049.34C2228.72,1047.89 2229.94,1046.71 2231.44,1046.71L2295.54,1046.71C2297.03,1046.71 2298.25,1047.89 2298.25,1049.34Z" style="fill:rgb(165,170,169);"/>
+        </g>
+    </g>
+    <g id="Colour" transform="matrix(3.749,0,0,3.749,-8078.71,-2926)">
+        <circle cx="2291.47" cy="917.043" r="65.731" style="fill:rgb(6,174,66);"/>
+    </g>
+</svg>
