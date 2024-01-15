@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "canvg": "^4.0.1",
+    "lodash-es": "^4.17.21",
     "vue": "^3.3.11"
   },
   "devDependencies": {
