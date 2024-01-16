@@ -1,3 +1,11 @@
+<script setup lang="ts">
+    // Types
+    import LabelDataType from '@/types/LabelData'
+
+    // Component props
+    defineProps<{ data: LabelDataType }>()
+</script>
+
 <template>
     <svg viewBox="0 0 1960 1470" xmlns="http://www.w3.org/2000/svg" xml:space="preserve">
 
@@ -53,11 +61,3 @@
 
     </svg>
 </template>
-
-<script setup lang="ts">
-// Types
-import LabelDataType from '@/types/LabelData'
-
-// Component props
-defineProps<{ data: LabelDataType }>()
-</script>

@@ -1,1 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&amp;display=block');
+
+body {
+    /* Global colours */
+    --global-text: #2D2D2D;
+    --global-outline: #A5AAA9;
+    --global-accent: #06AE42;
+}
+
+.a-floating {
+    min-width: 220px;
+    width: 220px;
+}

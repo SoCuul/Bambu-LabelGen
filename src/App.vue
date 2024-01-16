@@ -1,87 +1,146 @@
 <script setup lang="ts">
-import { reactive } from 'vue'
-import { Canvg } from 'canvg'
-import downloadURI from '@/utils/downloadURI'
+    import { reactive, ref } from 'vue'
+    import { downloadLabel } from '@/utils/downloadLabel'
 
-// Types
-import LabelDataType from '@/types/LabelData'
+    // Types
+    import LabelDataType from '@/types/LabelData'
 
-// Label base template
-import Label from '@/components/Label.vue'
+    // Label base template
+    import GeneratedLabel from '@/components/GeneratedLabel.vue'
 
-// Customizable data
-const configData = reactive(
-    {
-        text: {
-            brand: 'Brand',
-            type: 'Type',
-            diameter: '? mm',
-            length: '? m',
-            temp: '?',
-            weight: '? kg',
-            code: '?',
-            colour_name: '?'
-        },
-        colour: {
-            background: '#FFFFFF',
-            text: '#2D2D2D',
-            outline: '#A5AAA9',
-            filament: '#06AE42'
-        }
-    } as LabelDataType
-)
+    // Customizable data
+    const configData = reactive(
+        {
+            text: {
+                brand: '',
+                type: '',
+                diameter: '',
+                length: '',
+                temp: '',
+                weight: '',
+                code: '',
+                colour_name: ''
+            },
+            colour: {
+                background: '#FFFFFF',
+                text: '#2D2D2D',
+                outline: '#A5AAA9',
+                filament: '#06AE42'
+            }
+        } as LabelDataType
+    )
 
-// Download label as png
-async function downloadLabel(e: Event) {
-    const svgElement = document.querySelector('#full-sized-label') as SVGSVGElement
-    const { width, height } = svgElement.viewBox.baseVal
-
-    const canvas = document.querySelector('canvas') as HTMLCanvasElement
-    const ctx = canvas.getContext('2d') as CanvasRenderingContext2D
-
-    canvas.width = width
-    canvas.height = height
-
-    const v = await Canvg.from(ctx, svgElement.outerHTML)
-    v.render()
-
-    downloadURI(canvas.toDataURL('image/png'), 'Label.png')
-}
+    const selectedPreset = ref('')
 </script>
 
 <template>
-    <input type="text" placeholder="Brand" v-model="configData.text.brand">
-    <input type="text" placeholder="Type" v-model="configData.text.type">
-    <input type="text" placeholder="Diameter" v-model="configData.text.diameter">
-    <input type="text" placeholder="Length" v-model="configData.text.length">
-    <input type="text" placeholder="Temp" v-model="configData.text.temp">
-    <input type="text" placeholder="Weight" v-model="configData.text.weight">
-    <input type="text" placeholder="Code" v-model="configData.text.code">
-    <input type="text" placeholder="Filament colour" v-model="configData.text.colour_name">
+    <div class="grid-row sm:grid-cols-2 place-items-stretch">
+        <!-- Configurable options -->
+        <ACard class="large-card">
+            <div class="a-card-body a-card-spacer">
 
-    <br><br>
+                <!-- Presets -->
+                <ACard variant="light" color="lighterGrey">
+                    <div class="a-card-body a-card-spacer">
+                        
+                        <h1 class="a-title option-card-title">Presets</h1>
+                        
+                        <ASelect type="text" placeholder="Click to select a preset" v-model="selectedPreset"></ASelect>
+                        
+                    </div>
+                </ACard>
 
-    <input type="color" v-model="configData.colour.filament">
-    <input type="color" v-model="configData.colour.text">
-    <input type="color" v-model="configData.colour.outline">
-    <input type="color" v-model="configData.colour.background">
+                <!-- Filament type -->
+                <ACard variant="light" color="lighterGrey">
+                    <div class="a-card-body a-card-spacer">
+                        
+                        <h1 class="a-title option-card-title">Filament type</h1>
+                        
+                        <div class="grid-row sm:grid-cols-2 place-items-stretch">
+                            <AInput type="text" label="Brand" placeholder="Bambu" v-model="configData.text.brand"></AInput>
+                            <AInput type="text" label="Type" placeholder="PLA" v-model="configData.text.type"></AInput>
+                        </div>
+                        
+                    </div>
+                </ACard>
+                
+                <!-- Filament info -->
+                <ACard variant="light" color="lighterGrey">
+                    <div class="a-card-body a-card-spacer">
+                        
+                        <h1 class="a-title option-card-title">Filament info</h1>
+                        
+                        <div class="grid-row sm:grid-cols-2 place-items-stretch">
+                            <AInput type="text" label="Diameter" placeholder="1.75 ± 0.03mm" v-model="configData.text.diameter"></AInput>
+                            <AInput type="text" label="Length" placeholder="330m" v-model="configData.text.length"></AInput>
+                            <AInput type="text" label="Temp" placeholder="190-220" v-model="configData.text.temp"></AInput>
+                            <AInput type="text" label="Weight" placeholder="1kg" v-model="configData.text.weight"></AInput>
+                            <AInput type="text" label="Code" placeholder="12345" v-model="configData.text.code"></AInput>
+                            <AInput type="text" label="Filament colour" placeholder="White" v-model="configData.text.colour_name"></AInput>
+                        </div>
+                        
+                    </div>
+                </ACard>
+                
+                <!-- Colours -->
+                <ACard variant="light" color="lighterGrey">
+                    <div class="a-card-body a-card-spacer">
+                        
+                        <h1 class="a-title option-card-title">Colours</h1>
+                        
+                        <div class="grid-row sm:grid-cols-2 place-items-stretch">
 
-    <br><br><br><br>
+                            <ABtn variant="light" :style="`width: 220px; background: ${configData.colour.filament}`">
+                                Filament Colour
+                                <ColourPickerMenu v-bind:colourVar="configData.colour.filament" @changedColour="configData.colour.filament = $event"/>
+                            </ABtn>
+                            <ABtn variant="light" :style="`width: 220px; background: ${configData.colour.text}`">
+                                Text Colour
+                                <ColourPickerMenu v-bind:colourVar="configData.colour.text" @changedColour="configData.colour.text = $event"/>
+                            </ABtn>
+                            <ABtn variant="light" :style="`width: 220px; background: ${configData.colour.outline}`">
+                                Outline Colour
+                                <ColourPickerMenu v-bind:colourVar="configData.colour.outline" @changedColour="configData.colour.outline = $event"/>
+                            </ABtn>
+                            <ABtn variant="light" :style="`width: 220px; background: ${configData.colour.background}`">
+                                Background Colour
+                                <ColourPickerMenu v-bind:colourVar="configData.colour.background" @changedColour="configData.colour.background = $event"/>
+                            </ABtn>
 
-    <!-- Label preview -->
-    <div style="text-align: center;">
-        <Label v-model:data="configData" height="245" style="outline: 1rem solid black;" />
+                        </div>
+                        
+                    </div>
+                </ACard>
 
-        <br><br><br>
+            </div>
 
-        <button @click="downloadLabel" style="text-align: center;">Download Label</button>
+        </ACard>
+
+        <!-- Preview and download -->
+        <div class="grid-row sm:grid-cols-1 place-items-stretch" style="justify-items: center;">
+            <br>
+
+            <GeneratedLabel v-model:data="configData" height="245" />
+            
+            <ABtn color="success" variant="fill" @click="downloadLabel" class="text-xl" style="width: 27.5%;">Download Label</ABtn>
+
+            <br>
+        </div>
     </div>
 
     <!-- Full sized label -->
     <div style="display: none">
         <canvas id="canvas"></canvas>
-        <Label id="full-sized-label" v-model:data="configData" />
+        <GeneratedLabel id="full-sized-label" v-model:data="configData" />
     </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+    .large-card {
+        margin: var(--a-card-padding);
+    }
+
+    .option-card-title {
+        color: lightGrey;
+    }
+</style>

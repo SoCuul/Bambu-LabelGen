@@ -20,7 +20,11 @@
             "@/*": [
                 "./src/*"
             ]
-        }
+        },
+
+        "types": [
+            "anu-vue/volar"
+        ]
     },
     "include": [
         "src/**/*.ts",
