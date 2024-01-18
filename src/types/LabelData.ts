@@ -16,6 +16,7 @@ export default interface LabelData {
         background: string
     },
     extra: {
-        showSpool: boolean
+        showSpool: boolean,
+        disableBambuLogo: boolean
     }
 }

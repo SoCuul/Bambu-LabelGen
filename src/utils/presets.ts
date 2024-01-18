@@ -10,6 +10,9 @@ const presets: { [key: string]: LabelPreset | 'spacer' } = {
             length: '',
             temp: '',
             weight: ''
+        },
+        extra: {
+            disableBambuLogo: false
         }
     },
 
@@ -25,6 +28,9 @@ const presets: { [key: string]: LabelPreset | 'spacer' } = {
             length: '330 m',
             temp: '190-220',
             weight: '1 kg'
+        },
+        extra: {
+            disableBambuLogo: false
         }
     },
     'Bambu PLA Silk': {
@@ -35,6 +41,9 @@ const presets: { [key: string]: LabelPreset | 'spacer' } = {
             length: '315 m',
             temp: '210-230',
             weight: '1 kg'
+        },
+        extra: {
+            disableBambuLogo: false
         }
     },
     'Bambu PETG Basic': {
@@ -45,6 +54,9 @@ const presets: { [key: string]: LabelPreset | 'spacer' } = {
             length: '330 m',
             temp: '230-260',
             weight: '1 kg'
+        },
+        extra: {
+            disableBambuLogo: false
         }
     },
 
@@ -61,6 +73,9 @@ const presets: { [key: string]: LabelPreset | 'spacer' } = {
             length: '325 m',
             temp: '220-250',
             weight: '1 kg'
+        },
+        extra: {
+            disableBambuLogo: true
         }
     }
 }

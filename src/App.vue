@@ -32,7 +32,8 @@
                 filament: '#06AE42'
             },
             extra: {
-                showSpool: true
+                showSpool: true,
+                disableBambuLogo: false
             }
         } as LabelDataType
     )
@@ -155,6 +156,8 @@
                         <!-- Card Body - Section 2 -->
                         <div class="grid-row sm:grid-cols-2 place-items-stretch !mt-5">
                             <ACheckbox color="accent" label="Display spool icon around colour" v-model="configData.extra.showSpool"></ACheckbox>
+                            
+                            <ACheckbox color="accent" label="Disable Bambu logo" v-model="configData.extra.disableBambuLogo"></ACheckbox>
                         </div>
                         
                     </div>

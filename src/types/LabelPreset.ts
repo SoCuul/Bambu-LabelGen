@@ -6,5 +6,8 @@ export default interface LabelPreset {
         length: string,
         temp: string,
         weight: string
+    },
+    extra: {
+        disableBambuLogo: boolean
     }
 }
