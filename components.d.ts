@@ -10,6 +10,7 @@ declare module 'vue' {
     ABtn: typeof import('anu-vue')['ABtn']
     AButton: typeof import('anu-vue')['AButton']
     ACard: typeof import('anu-vue')['ACard']
+    ACheckbox: typeof import('anu-vue')['ACheckbox']
     AInput: typeof import('anu-vue')['AInput']
     AList: typeof import('anu-vue')['AList']
     AMenu: typeof import('anu-vue')['AMenu']

@@ -8,23 +8,38 @@ dependencies:
   '@anu-vue/preset-theme-default':
     specifier: ^0.15.2
     version: 0.15.2
+  '@types/jsurl':
+    specifier: ^0.1.2
+    version: 0.1.2
   anu-vue:
     specifier: ^0.15.2
     version: 0.15.2(@unocss/reset@0.41.2)(@vueuse/core@9.13.0)(vue-router@4.2.5)
   canvg:
     specifier: ^4.0.1
     version: 4.0.1
+  jsurl:
+    specifier: ^0.1.5
+    version: 0.1.5
+  lodash.merge:
+    specifier: ^4.6.2
+    version: 4.6.2
   vue:
     specifier: ^3.3.11
     version: 3.4.13(typescript@5.3.3)
   vue-color-kit:
     specifier: ^1.0.6
     version: 1.0.6(vue@3.4.13)
+  vue3-toastify:
+    specifier: ^0.2.1
+    version: 0.2.1(vue@3.4.13)
 
 devDependencies:
   '@iconify-json/bx':
     specifier: ^1.1.10
     version: 1.1.10
+  '@types/lodash.merge':
+    specifier: ^4.6.9
+    version: 4.6.9
   '@types/node':
     specifier: ^20.11.0
     version: 20.11.0
@@ -902,6 +917,20 @@ packages:
 
   /@types/json-schema@7.0.15:
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==, tarball: https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.15.tgz}
+    dev: true
+
+  /@types/jsurl@0.1.2:
+    resolution: {integrity: sha512-uZOjZDzB0x48XKmMvykALaLWZ1xF85BcoI/7K6f+oqNdYtnomXVfQJC7CdJER4GTlgli5zA+QwZc82JulVw4xg==, tarball: https://registry.npmjs.org/@types/jsurl/-/jsurl-0.1.2.tgz}
+    dev: false
+
+  /@types/lodash.merge@4.6.9:
+    resolution: {integrity: sha512-23sHDPmzd59kUgWyKGiOMO2Qb9YtqRO/x4IhkgNUiPQ1+5MUVqi6bCZeq9nBJ17msjIMbEIO5u+XW4Kz6aGUhQ==, tarball: https://registry.npmjs.org/@types/lodash.merge/-/lodash.merge-4.6.9.tgz}
+    dependencies:
+      '@types/lodash': 4.14.202
+    dev: true
+
+  /@types/lodash@4.14.202:
+    resolution: {integrity: sha512-OvlIYQK9tNneDlS0VN54LLd5uiPCBOp7gS5Z0f1mjoJYBrtStzgmJBxONW3U6OZqdtNzZPmn9BS/7WI7BFFcFQ==, tarball: https://registry.npmjs.org/@types/lodash/-/lodash-4.14.202.tgz}
     dev: true
 
   /@types/node@20.11.0:
@@ -2368,6 +2397,10 @@ packages:
     resolution: {integrity: sha512-gfFQZrcTc8CnKXp6Y4/CBT3fTc0OVuDofpre4aEeEpSBPV5X5v4+Vmx+8snU7RLPrNHPKSgLxGo9YuQzz20o+w==, tarball: https://registry.npmjs.org/jsonc-parser/-/jsonc-parser-3.2.0.tgz}
     dev: true
 
+  /jsurl@0.1.5:
+    resolution: {integrity: sha512-HyrafsIRCa+VlJAsvuvxWUM0iMeZd6+2J4JngECGF0JTRi5moUFV/mLxgyYfDizGF4ofLLYRpvD/Kt1d9wlUUg==, tarball: https://registry.npmjs.org/jsurl/-/jsurl-0.1.5.tgz}
+    dev: false
+
   /keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==, tarball: https://registry.npmjs.org/keyv/-/keyv-4.5.4.tgz}
     dependencies:
@@ -2400,7 +2433,6 @@ packages:
 
   /lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==, tarball: https://registry.npmjs.org/lodash.merge/-/lodash.merge-4.6.2.tgz}
-    dev: true
 
   /lodash@4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==, tarball: https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz}
@@ -3134,6 +3166,18 @@ packages:
       semver: 7.5.4
       typescript: 5.3.3
     dev: true
+
+  /vue3-toastify@0.2.1(vue@3.4.13):
+    resolution: {integrity: sha512-u4i5LCu1q5qs4L4Kbjb4u8NipCS8ox1fCHQ6XFS62676xnA6Q/AJRpZEkAurTMp723LeH6eQX6k9+24bKf1T4Q==, tarball: https://registry.npmjs.org/vue3-toastify/-/vue3-toastify-0.2.1.tgz}
+    engines: {node: '>=16', npm: '>=7'}
+    peerDependencies:
+      vue: '>=3.2.0'
+    peerDependenciesMeta:
+      vue:
+        optional: true
+    dependencies:
+      vue: 3.4.13(typescript@5.3.3)
+    dev: false
 
   /vue@3.3.4:
     resolution: {integrity: sha512-VTyEYn3yvIeY1Py0WaYGZsXnz3y5UnGi62GjVEqvEGPl6nxbOrCXbVOTQWBEJUqAyTUk2uJ5JLVnYJ6ZzGbrSw==, tarball: https://registry.npmjs.org/vue/-/vue-3.3.4.tgz}

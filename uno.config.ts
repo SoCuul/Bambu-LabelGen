@@ -14,6 +14,7 @@ export default defineConfig({
         presetAnu({
             // Custom anu colours
             colors: [
+                'accent',
                 'lighterGrey'
             ]
         }),

@@ -2,7 +2,7 @@
   "name": "bambu-labelgen",
   "description": "A Bambu-style filament label generator",
   "private": true,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,13 +11,18 @@
   },
   "dependencies": {
     "@anu-vue/preset-theme-default": "^0.15.2",
+    "@types/jsurl": "^0.1.2",
     "anu-vue": "^0.15.2",
     "canvg": "^4.0.1",
+    "jsurl": "^0.1.5",
+    "lodash.merge": "^4.6.2",
     "vue": "^3.3.11",
-    "vue-color-kit": "^1.0.6"
+    "vue-color-kit": "^1.0.6",
+    "vue3-toastify": "^0.2.1"
   },
   "devDependencies": {
     "@iconify-json/bx": "^1.1.10",
+    "@types/lodash.merge": "^4.6.9",
     "@types/node": "^20.11.0",
     "@typescript-eslint/eslint-plugin": "^6.19.0",
     "@typescript-eslint/parser": "^6.19.0",

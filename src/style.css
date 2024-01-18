@@ -5,9 +5,11 @@ body {
     --global-text: #2D2D2D;
     --global-outline: #A5AAA9;
     --global-accent: #06AE42;
+    --global-lighterGrey: #54555F;
+    --global-cardBg: #18181b;
 }
 
-.a-floating {
-    min-width: 220px;
-    width: 220px;
+/* Customize toasts background */
+.Toastify__toast-theme--dark {
+    background-color: var(--global-lighterGrey);
 }

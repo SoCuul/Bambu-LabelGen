@@ -23,7 +23,8 @@
         },
 
         "types": [
-            "anu-vue/volar"
+            "anu-vue/volar",
+            "vue3-toastify/global"
         ]
     },
     "include": [
