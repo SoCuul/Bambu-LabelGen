@@ -4,7 +4,10 @@
     import { toast } from 'vue3-toastify'
     import objectMerge from 'lodash.merge'
     import jsurl from 'jsurl'
-    import presets from '@/utils/presets'
+
+    // Imported label data
+    import presets from '@/data/presets'
+    import logos from '@/data/logos'
 
     // Types
     import LabelDataType from '@/types/LabelData'
@@ -31,9 +34,11 @@
                 outline: '#A5AAA9',
                 filament: '#06AE42'
             },
+            graphics: {
+                logo: 'Bambu Lab'
+            },
             extra: {
-                showSpool: true,
-                disableBambuLogo: false
+                showSpool: true
             }
         } as LabelDataType
     )
@@ -124,6 +129,8 @@
                             <AInput type="text" label="Brand" placeholder="Eg. Bambu" v-model="configData.text.brand"></AInput>
                             
                             <AInput type="text" label="Type" placeholder="Eg. PLA" v-model="configData.text.type"></AInput>
+
+                            <ASelect type="text" label="Brand Logo" placeholder="No logo" :options="Object.keys(logos)" v-model="configData.graphics.logo"></ASelect>
                         </div>
                         
                     </div>
@@ -156,8 +163,6 @@
                         <!-- Card Body - Section 2 -->
                         <div class="grid-row sm:grid-cols-2 place-items-stretch !mt-5">
                             <ACheckbox color="accent" label="Display spool icon around colour" v-model="configData.extra.showSpool"></ACheckbox>
-                            
-                            <ACheckbox color="accent" label="Disable Bambu logo" v-model="configData.extra.disableBambuLogo"></ACheckbox>
                         </div>
                         
                     </div>

@@ -15,8 +15,10 @@ export default interface LabelData {
         outline: string,
         background: string
     },
+    graphics: {
+        logo: string
+    },
     extra: {
-        showSpool: boolean,
-        disableBambuLogo: boolean
+        showSpool: boolean
     }
 }
