@@ -13,8 +13,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 export default defineConfig({
     plugins: [
         vue(),
-        svgLoader(),
         Unocss(),
+        svgLoader(),
         Components({
             resolvers: [
                 AnuComponentResolver()

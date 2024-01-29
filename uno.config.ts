@@ -1,6 +1,6 @@
 import { presetAnu, presetIconExtraProperties } from 'anu-vue'
 import { presetThemeDefault } from '@anu-vue/preset-theme-default'
-import { defineConfig, presetIcons, presetUno } from 'unocss'
+import { defineConfig, presetUno, presetIcons, presetWebFonts } from 'unocss'
 
 export default defineConfig({
     presets: [
@@ -8,6 +8,12 @@ export default defineConfig({
         presetIcons({
             scale: 1.2,
             extraProperties: presetIconExtraProperties
+        }),
+        presetWebFonts({
+            provider: 'google',
+            fonts: {
+                sans: 'Inter:100,200,300,400,500,600,700'
+            }
         }),
 
         // anu-vue preset

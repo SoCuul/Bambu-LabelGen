@@ -8,18 +8,13 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     ABtn: typeof import('anu-vue')['ABtn']
-    AButton: typeof import('anu-vue')['AButton']
     ACard: typeof import('anu-vue')['ACard']
     ACheckbox: typeof import('anu-vue')['ACheckbox']
     AInput: typeof import('anu-vue')['AInput']
-    AList: typeof import('anu-vue')['AList']
     AMenu: typeof import('anu-vue')['AMenu']
     ASelect: typeof import('anu-vue')['ASelect']
-    ATypography: typeof import('anu-vue')['ATypography']
-    ColourPicker: typeof import('./src/components/ColourPicker.vue')['default']
     ColourPickerMenu: typeof import('./src/components/ColourPickerMenu.vue')['default']
     GeneratedLabel: typeof import('./src/components/GeneratedLabel.vue')['default']
-    Label: typeof import('./src/components/Label.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

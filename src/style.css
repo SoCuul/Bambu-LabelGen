@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&amp;display=block');
-
 body {
     /* Global colours */
     --global-text: #2D2D2D;
@@ -12,4 +10,10 @@ body {
 /* Customize toasts background */
 .Toastify__toast-theme--dark {
     background-color: var(--global-lighterGrey);
+}
+
+/* Fix checkbox icon not appearing on built site (how can this even happen) */
+.a-checkbox-icon {
+    --un-scale-x: 100% !important;
+    --un-scale-y: 100% !important;
 }

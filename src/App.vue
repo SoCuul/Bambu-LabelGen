@@ -96,29 +96,29 @@
 <template>
     <!-- Header -->
     <header>
-        <h1 class="a-title mt-6 mb-2 ml-6 mr-6 ws-normal text-center text-4xl">Bambu Lab Label Generator</h1>
+        <h1 class="a-title mt-6 mb-2 mx-6 ws-normal text-center text-4xl">Bambu Lab Label Generator</h1>
     </header>
 
     <main class="grid-row sm:grid-cols-2 place-items-start">
         <!-- Configurable options -->
-        <ACard class="large-card">
+        <ACard class="large-card" color="" title="" subtitle="" text="">
             <div class="a-card-body a-card-spacer">
 
                 <!-- Presets -->
-                <ACard variant="light" color="lighterGrey">
+                <ACard variant="light" color="lighterGrey" title="" subtitle="" text="">
                     <div class="a-card-body a-card-spacer">
                         
                         <!-- Card Title -->
                         <h1 class="a-title option-card-title">Presets</h1>
                         
                         <!-- Card Body -->
-                        <ASelect type="text" placeholder="Click to select a preset" :options="Object.keys(presets)" @change="applyPreset"></ASelect>
+                        <ASelect type="text" placeholder="Click to select a preset" :options="Object.keys(presets)" @change="applyPreset" label="" inputWrapperAttrs=""></ASelect>
                         
                     </div>
                 </ACard>
 
                 <!-- Filament type -->
-                <ACard variant="light" color="lighterGrey">
+                <ACard variant="light" color="lighterGrey" title="" subtitle="" text="">
                     <div class="a-card-body a-card-spacer">
                         
                         <!-- Card Title -->
@@ -126,18 +126,18 @@
                         
                         <!-- Card Body -->
                         <div class="grid-row sm:grid-cols-2 place-items-stretch">
-                            <AInput type="text" label="Brand" placeholder="Eg. Bambu" v-model="configData.text.brand"></AInput>
+                            <AInput type="text" label="Brand" placeholder="Eg. Bambu" v-model="configData.text.brand" inputWrapperAttrs=""></AInput>
                             
-                            <AInput type="text" label="Type" placeholder="Eg. PLA" v-model="configData.text.type"></AInput>
+                            <AInput type="text" label="Type" placeholder="Eg. PLA" v-model="configData.text.type" inputWrapperAttrs=""></AInput>
 
-                            <ASelect type="text" label="Brand Logo" placeholder="No logo" :options="Object.keys(logos)" v-model="configData.graphics.logo"></ASelect>
+                            <ASelect type="text" label="Brand Logo" placeholder="No logo" :options="Object.keys(logos)" v-model="configData.graphics.logo" inputWrapperAttrs=""></ASelect>
                         </div>
                         
                     </div>
                 </ACard>
                 
                 <!-- Filament info -->
-                <ACard variant="light" color="lighterGrey">
+                <ACard variant="light" color="lighterGrey" title="" subtitle="" text="">
                     <div class="a-card-body a-card-spacer">
                         
                         <!-- Card Title -->
@@ -145,31 +145,31 @@
                         
                         <!-- Card Body - Section 1 -->
                         <div class="grid-row sm:grid-cols-2 place-items-stretch !mb-5">
-                            <AInput type="text" label="Diameter" placeholder="Eg. 1.75 ± 0.03mm" v-model="configData.text.diameter"></AInput>
+                            <AInput type="text" label="Diameter" placeholder="Eg. 1.75 ± 0.03mm" v-model="configData.text.diameter" inputWrapperAttrs=""></AInput>
                             
-                            <AInput type="text" label="Length" placeholder="Eg .330m" v-model="configData.text.length"></AInput>
+                            <AInput type="text" label="Length" placeholder="Eg .330m" v-model="configData.text.length" inputWrapperAttrs=""></AInput>
                             
-                            <AInput type="text" label="Temp" placeholder="Eg. 190-220" v-model="configData.text.temp"></AInput>
+                            <AInput type="text" label="Temp" placeholder="Eg. 190-220" v-model="configData.text.temp" inputWrapperAttrs=""></AInput>
                             
-                            <AInput type="text" label="Weight" placeholder="Eg. 1kg" v-model="configData.text.weight"></AInput>
+                            <AInput type="text" label="Weight" placeholder="Eg. 1kg" v-model="configData.text.weight" inputWrapperAttrs=""></AInput>
                             
-                            <AInput type="text" label="Filament Code" placeholder="Eg. 12345" v-model="configData.text.code"></AInput>
+                            <AInput type="text" label="Filament Code" placeholder="Eg. 12345" v-model="configData.text.code" inputWrapperAttrs=""></AInput>
                             
-                            <AInput type="text" label="Filament colour name" placeholder="Eg. White" v-model="configData.text.colour_name"></AInput>
+                            <AInput type="text" label="Filament colour name" placeholder="Eg. White" v-model="configData.text.colour_name" inputWrapperAttrs=""></AInput>
                         </div>
 
-                        <hr class="!mt-7 !mb-7">
+                        <hr class="!my-7">
 
                         <!-- Card Body - Section 2 -->
                         <div class="grid-row sm:grid-cols-2 place-items-stretch !mt-5">
-                            <ACheckbox color="accent" label="Display spool icon around colour" v-model="configData.extra.showSpool"></ACheckbox>
+                            <ACheckbox color="accent" label="Display spool icon around colour" v-model="configData.extra.showSpool" checked-value=""></ACheckbox>
                         </div>
                         
                     </div>
                 </ACard>
                 
                 <!-- Colours -->
-                <ACard variant="light" color="lighterGrey">
+                <ACard variant="light" color="lighterGrey" title="" subtitle="" text="">
                     <div class="a-card-body a-card-spacer">
                         
                         <!-- Card Title -->
@@ -177,25 +177,25 @@
                         
                         <!-- Card Body -->
                         <div class="grid-row xl:grid-cols-2 sm:grid-cols-1 place-items-center">
-                            <ABtn variant="light" class="colourpicker-btn" :style="`background: ${configData.colour.filament}`">
+                            <ABtn variant="light" class="colourpicker-btn" :style="`background: ${configData.colour.filament}`" appendIcon="" icon="">
                                 Filament Colour
 
                                 <ColourPickerMenu v-model="configData.colour.filament"/>
                             </ABtn>
 
-                            <ABtn variant="light" class="colourpicker-btn" :style="`background: ${configData.colour.text}`">
+                            <ABtn variant="light" class="colourpicker-btn" :style="`background: ${configData.colour.text}`" appendIcon="" icon="">
                                 Text Colour
 
                                 <ColourPickerMenu v-model="configData.colour.text"/>
                             </ABtn>
 
-                            <ABtn variant="light" class="colourpicker-btn" :style="`background: ${configData.colour.outline}`">
+                            <ABtn variant="light" class="colourpicker-btn" :style="`background: ${configData.colour.outline}`" appendIcon="" icon="">
                                 Outline Colour
 
                                 <ColourPickerMenu v-model="configData.colour.outline"/>
                             </ABtn>
 
-                            <ABtn variant="light" class="colourpicker-btn" :style="`background: ${configData.colour.background}`">
+                            <ABtn variant="light" class="colourpicker-btn" :style="`background: ${configData.colour.background}`" appendIcon="" icon="">
                                 Background Colour
 
                                 <ColourPickerMenu v-model="configData.colour.background"/>
@@ -206,16 +206,15 @@
                 </ACard>
 
             </div>
-
         </ACard>
 
         <!-- Preview and download -->
-        <div class="grid-row place-items-center pt-10">
+        <div class="grid-row place-items-center pt-10 pb-17.5">
             <GeneratedLabel v-model:data="configData" height="245" />
             
             <div class="mt-2">
-                <ABtn color="success" variant="fill" @click="downloadLabel" class="text-lg labelpreview-btn mr-7">Download Label</ABtn>
-                <ABtn color="info" variant="fill" @click="copyLink" class="text-lg labelpreview-btn">Copy Link</ABtn>
+                <ABtn color="success" variant="fill" @click="downloadLabel" class="text-lg labelpreview-btn mr-7" appendIcon="" icon="">Download Label</ABtn>
+                <ABtn color="info" variant="fill" @click="copyLink" class="text-lg labelpreview-btn" appendIcon="" icon="">Copy Link</ABtn>
             </div>
         </div>
     </main>

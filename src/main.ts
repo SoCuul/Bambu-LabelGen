@@ -1,6 +1,8 @@
 import { createApp } from 'vue'
 import App from '@/App.vue'
-import { anu } from 'anu-vue'
+import { anu, PluginOptions as AnuPluginOptions } from 'anu-vue'
+
+import type { PartialDeep } from 'type-fest'
 
 // Anu lib import
 import 'uno.css'
@@ -32,10 +34,12 @@ createApp(App)
                 }
             }
         }
-    })
+    } as PartialDeep<AnuPluginOptions>)
+
     .use(Vue3Toastify, {
         theme: 'dark',
         position: 'bottom-right',
         clearOnUrlChange: false
     } as ToastContainerOptions)
+    
     .mount('#app')

@@ -2,9 +2,11 @@ import { Canvg } from 'canvg'
 
 /**
  * Render and download the generated label
+ * 
+ * @param elementQuery The query string to locate the svg element
  */
-export async function downloadLabel (): Promise<void> {
-    const svgElement = document.querySelector('#full-sized-label') as SVGSVGElement
+export async function downloadLabel (elementQuery = '#full-sized-label'): Promise<void> {
+    const svgElement = document.querySelector(elementQuery) as SVGSVGElement
     const { width, height } = svgElement.viewBox.baseVal
 
     const canvas = document.querySelector('canvas') as HTMLCanvasElement
