@@ -11,6 +11,7 @@ declare module 'vue' {
     ACard: typeof import('anu-vue')['ACard']
     ACheckbox: typeof import('anu-vue')['ACheckbox']
     AInput: typeof import('anu-vue')['AInput']
+    AList: typeof import('anu-vue')['AList']
     AMenu: typeof import('anu-vue')['AMenu']
     ASelect: typeof import('anu-vue')['ASelect']
     ColourPickerMenu: typeof import('./src/components/ColourPickerMenu.vue')['default']

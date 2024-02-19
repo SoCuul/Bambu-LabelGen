@@ -43,6 +43,34 @@
         } as LabelDataType
     )
 
+    // Download formats
+    const items = [
+    {
+    icon: 'i-bx-link-external text-sm cursor-pointer',
+    title: 'Electronics',
+    subtitle: 'Mobile, Earbuds, TV',
+    avatarProps: { icon: 'i-bx-mobile-alt' },
+  },
+  {
+    icon: 'i-bx-link-external text-sm cursor-pointer',
+    title: 'Fashion',
+    subtitle: 'T-shirt, Jeans, Shoes',
+    avatarProps: { icon: 'i-bx-closet' },
+  },
+  {
+    icon: 'i-bx-link-external text-sm cursor-pointer',
+    title: 'Decor',
+    subtitle: 'Fine Art, Dining',
+    avatarProps: { icon: 'i-bx-home' },
+  },
+  {
+    icon: 'i-bx-link-external text-sm cursor-pointer',
+    title: 'Sports',
+    subtitle: 'Football, Cricket Kit',
+    avatarProps: { icon: 'i-bx-football' },
+  }
+    ]
+
     // URL State (decode on page load)
     onMounted(() => {
         // Decode data url parameter
@@ -213,7 +241,14 @@
             <GeneratedLabel v-model:data="configData" height="245" />
             
             <div class="mt-2">
-                <ABtn color="success" variant="fill" @click="downloadLabel" class="text-lg labelpreview-btn mr-7" appendIcon="" icon="">Download Label</ABtn>
+                <ABtn color="success" variant="fill" @click="downloadLabel" class="text-lg labelpreview-btn mr-7" appendIcon="" icon="">
+                    <!-- Download formats -->
+                    <!-- <AMenu>
+                        <AList/>
+                    </AMenu> -->
+                    
+                    Download Label
+                </ABtn>
                 <ABtn color="info" variant="fill" @click="copyLink" class="text-lg labelpreview-btn" appendIcon="" icon="">Copy Link</ABtn>
             </div>
         </div>
