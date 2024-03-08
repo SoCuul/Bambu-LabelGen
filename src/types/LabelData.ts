@@ -1,3 +1,5 @@
+import { FilamentColourTypes } from '@/types/FilamentColourTypes'
+
 export default interface LabelData {
     text: {
         brand: string,
@@ -11,6 +13,7 @@ export default interface LabelData {
     },
     colour: {
         filament: string,
+        filament2: string,
         text: string,
         outline: string,
         background: string
@@ -19,6 +22,7 @@ export default interface LabelData {
         logo: string
     },
     extra: {
+        colourType: FilamentColourTypes,
         showSpool: boolean
     }
 }

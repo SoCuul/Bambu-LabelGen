@@ -11,9 +11,11 @@
 
     // Types
     import LabelDataType from '@/types/LabelData'
+    import { FilamentColourTypes } from '@/types/FilamentColourTypes'
 
     // Components
     import GeneratedLabel from '@/components/GeneratedLabel.vue'
+    import FilamentColourTypeSelect from '@/components/FilamentColourTypeSelect.vue'
 
     // Customizable data
     const configData = reactive(
@@ -29,15 +31,17 @@
                 colour_name: ''
             },
             colour: {
-                background: '#FFFFFF',
+                filament: '#06AE42',
+                filament2: '#87ceeb',
                 text: '#2D2D2D',
                 outline: '#A5AAA9',
-                filament: '#06AE42'
+                background: '#FFFFFF'
             },
             graphics: {
                 logo: 'Bambu Lab'
             },
             extra: {
+                colourType: FilamentColourTypes.Single,
                 showSpool: true
             }
         } as LabelDataType
@@ -162,6 +166,13 @@
 
                         <!-- Card Body - Section 2 -->
                         <div class="grid-row sm:grid-cols-2 place-items-stretch !mt-5">
+                            <FilamentColourTypeSelect :configData/>
+                        </div>
+
+                        <hr class="!my-7">
+
+                        <!-- Card Body - Section 3 -->
+                        <div class="grid-row sm:grid-cols-2 place-items-stretch !mt-5">
                             <ACheckbox color="accent" label="Display spool icon around colour" v-model="configData.extra.showSpool" checked-value=""></ACheckbox>
                         </div>
                         
@@ -182,6 +193,14 @@
 
                                 <ColourPickerMenu v-model="configData.colour.filament"/>
                             </ABtn>
+
+                            <div v-if="(configData.extra.colourType === FilamentColourTypes.Dual) || (configData.extra.colourType === FilamentColourTypes.DualGradient)">
+                                <ABtn variant="light" class="colourpicker-btn" :style="`background: ${configData.colour.filament2}`" appendIcon="" icon="">
+                                    Filament Colour 2
+
+                                    <ColourPickerMenu v-model="configData.colour.filament2"/>
+                                </ABtn>
+                            </div>
 
                             <ABtn variant="light" class="colourpicker-btn" :style="`background: ${configData.colour.text}`" appendIcon="" icon="">
                                 Text Colour

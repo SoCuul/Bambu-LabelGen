@@ -4,6 +4,7 @@
 
     // Types
     import LabelDataType from '@/types/LabelData'
+    import { FilamentColourTypes } from '@/types/FilamentColourTypes'
 
     // Component props
     defineProps<{ data: LabelDataType }>()
@@ -11,6 +12,17 @@
 
 <template>
     <svg viewBox="0 0 1960 1470" xmlns="http://www.w3.org/2000/svg" xml:space="preserve">
+
+        <defs>
+            <linearGradient id="filament-colour-dual" x1="0" x2="1" y1="0" y2="0">
+                <stop offset="50%" :stop-color="data.colour.filament" />
+                <stop offset="50%" :stop-color="data.colour.filament2" />
+            </linearGradient>
+            <linearGradient id="filament-colour-gradient" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0%" :stop-color="data.colour.filament" />
+                <stop offset="100%" :stop-color="data.colour.filament2" />
+            </linearGradient>
+        </defs>
 
         <!-- Background -->
         <path :style="`fill: ${data.colour.background}`" transform="matrix(1.01977 0 0 .98525 -720.978 -503.465)" d="M707 511h1922v1492H707z" />
@@ -58,8 +70,18 @@
             <!-- Filament Colour Name -->
             <text v-if="data.text.colour_name" x="1124.25" y="950.001" :style="`font-family:&quot;Inter-Bold&quot;,&quot;Inter&quot;;font-weight:700;font-size:12px;fill:${data.colour.text};text-anchor:middle`" transform="translate(-1208.87 -1854.12) scale(3.11344)">{{ data.text.colour_name }}</text>
 
-            <!-- Filament Colour -->
-            <circle cx="2291.47" cy="917.043" r="65.731" :style="`fill: ${data.colour.filament}`" />
+            <!-- Filament Colour (Single) -->
+            <g v-if="data.extra.colourType === FilamentColourTypes.Single">
+                <circle cx="2291.47" cy="917.043" r="65.731" :style="`fill: ${data.colour.filament}`" />
+            </g>
+            <!-- Filament Colour (Dual) -->
+            <g v-else-if="data.extra.colourType === FilamentColourTypes.Dual">
+                <circle cx="2291.47" cy="917.043" r="65.731" style="fill: url('#filament-colour-dual')" />
+            </g>
+            <!-- Filament Colour (Dual (Gradient)) -->
+            <g v-if="data.extra.colourType === FilamentColourTypes.DualGradient">
+                <circle cx="2291.47" cy="917.043" r="65.731" style="fill: url('#filament-colour-gradient')" />
+            </g>
         </g>
 
     </svg>
