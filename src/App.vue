@@ -194,7 +194,7 @@
                                 <ColourPickerMenu v-model="configData.colour.filament"/>
                             </ABtn>
 
-                            <div v-if="(configData.extra.colourType === FilamentColourTypes.Dual) || (configData.extra.colourType === FilamentColourTypes.DualGradient)">
+                            <div v-if="(configData.extra.colourType === FilamentColourTypes.Dual) || (configData.extra.colourType === FilamentColourTypes.DualGradientLinear) || (configData.extra.colourType === FilamentColourTypes.DualGradientRadial) || (configData.extra.colourType === FilamentColourTypes.DualConcentric)">
                                 <ABtn variant="light" class="colourpicker-btn" :style="`background: ${configData.colour.filament2}`" appendIcon="" icon="">
                                     Filament Colour 2
 

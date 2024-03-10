@@ -14,14 +14,19 @@
     <svg viewBox="0 0 1960 1470" xmlns="http://www.w3.org/2000/svg" xml:space="preserve">
 
         <defs>
+            <!-- Dual colour filament gradients -->
             <linearGradient id="filament-colour-dual" x1="0" x2="1" y1="0" y2="0">
                 <stop offset="50%" :stop-color="data.colour.filament" />
                 <stop offset="50%" :stop-color="data.colour.filament2" />
             </linearGradient>
-            <linearGradient id="filament-colour-gradient" x1="0" x2="0" y1="0" y2="1">
+            <linearGradient id="filament-colour-gradientlinear" x1="0" x2="0" y1="0" y2="1">
                 <stop offset="0%" :stop-color="data.colour.filament" />
                 <stop offset="100%" :stop-color="data.colour.filament2" />
             </linearGradient>
+            <radialGradient id="filament-colour-gradientradial" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0%" :stop-color="data.colour.filament2" />
+                <stop offset="100%" :stop-color="data.colour.filament" />
+            </radialGradient>
         </defs>
 
         <!-- Background -->
@@ -78,9 +83,21 @@
             <g v-else-if="data.extra.colourType === FilamentColourTypes.Dual">
                 <circle cx="2291.47" cy="917.043" r="65.731" style="fill: url('#filament-colour-dual')" />
             </g>
-            <!-- Filament Colour (Dual (Gradient)) -->
-            <g v-if="data.extra.colourType === FilamentColourTypes.DualGradient">
-                <circle cx="2291.47" cy="917.043" r="65.731" style="fill: url('#filament-colour-gradient')" />
+            <!-- Filament Colour (Dual (Linear Gradient)) -->
+            <g v-else-if="data.extra.colourType === FilamentColourTypes.DualGradientLinear">
+                <circle cx="2291.47" cy="917.043" r="65.731" style="fill: url('#filament-colour-gradientlinear')" />
+            </g>
+            <!-- Filament Colour (Dual (Radial Gradient)) -->
+            <g v-else-if="data.extra.colourType === FilamentColourTypes.DualGradientRadial">
+                <circle cx="2291.47" cy="917.043" r="65.731" style="fill: url('#filament-colour-gradientradial')" />
+            </g>
+            <!-- Filament Colour (Dual (Concentric)) -->
+            <g v-else-if="data.extra.colourType === FilamentColourTypes.DualConcentric">
+                <!-- Outer -->
+                <circle cx="2291.47" cy="917.043" r="65.731" :style="`fill: ${data.colour.filament}`" />
+
+                <!-- Inner -->
+                <circle cx="2291.47" cy="917.043" r="35.731" :style="`fill: ${data.colour.filament2}`" />
             </g>
         </g>
 

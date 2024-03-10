@@ -50,7 +50,8 @@ module.exports = {
         'vue/no-unused-vars': 'off',
         'vue/require-prop-types': 'off',
         'vue/attribute-hyphenation': 'off',
-        'vue/component-definition-name-casing': 'off'
+        'vue/component-definition-name-casing': 'off',
+        'vue/no-mutating-props': 'off'
     },
     'overrides': [
         {
