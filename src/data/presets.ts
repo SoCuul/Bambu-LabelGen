@@ -23,7 +23,7 @@ const presets: { [key: string]: LabelPreset | 'spacer' } = {
     'Bambu PLA Basic': {
         text: {
             brand: 'Bambu',
-            type: 'PLA',
+            type: 'PLA Basic',
             diameter: '1.75 ± 0.03 mm',
             length: '330 m',
             temp: '190-220',
