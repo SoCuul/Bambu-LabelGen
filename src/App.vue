@@ -30,6 +30,12 @@
                 code: '',
                 colour_name: ''
             },
+            sizing: {
+                brand_font_size: '12',
+                type_font_size: '12',
+                fil_info_font_size: '12',
+                fil_colour_name_font_size: '12'
+            },
             colour: {
                 filament: '#06AE42',
                 filament2: '#87ceeb',
@@ -176,6 +182,25 @@
                             <ACheckbox color="accent" label="Display spool icon around colour" v-model="configData.extra.showSpool" checked-value=""></ACheckbox>
                         </div>
                         
+                    </div>
+                </ACard>
+
+                <!-- Font sizing -->
+                <ACard variant="light" color="lighterGrey" title="" subtitle="" text="">
+                    <div class="a-card-body a-card-spacer">
+                        
+                        <!-- Card Title -->
+                        <h1 class="a-title option-card-title">Font sizing (px)</h1>
+
+                        <div class="grid-row sm:grid-cols-3 place-items-stretch !mb-5">
+                            <AInput type="text" label="Filament Brand" placeholder="Eg. 12" v-model="configData.sizing.brand_font_size" inputWrapperAttrs=""></AInput>
+                            
+                            <AInput type="text" label="Filament Type" placeholder="Eg. 12" v-model="configData.sizing.type_font_size" inputWrapperAttrs=""></AInput>
+                            
+                            <AInput type="text" label="Filament Info" placeholder="Eg. 12" v-model="configData.sizing.fil_info_font_size" inputWrapperAttrs=""></AInput>
+                            
+                            <AInput type="text" label="Filament Colour Name" placeholder="Eg. 12" v-model="configData.sizing.fil_colour_name_font_size" inputWrapperAttrs=""></AInput>
+                        </div>
                     </div>
                 </ACard>
                 

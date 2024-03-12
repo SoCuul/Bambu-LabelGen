@@ -36,18 +36,18 @@
         <g>
 
             <!-- Brand Name -->
-            <text v-if="data.text.brand" x="1105.34" y="950.001" :style="`font-family:&quot;Inter-Bold&quot;,&quot;Inter&quot;;font-weight:700;font-size:12px;fill:${data.colour.text}`" transform="translate(-6024.82 -5079.143) scale(5.56281)">{{ data.text.brand }}</text>
+            <text v-if="data.text.brand" x="1105.34" y="950.001" :style="`font-family:&quot;Inter-Bold&quot;,&quot;Inter&quot;;font-weight:700;font-size:${data.sizing.brand_font_size}px;fill:${data.colour.text}`" transform="translate(-6024.82 -5079.143) scale(5.56281)">{{ data.text.brand }}</text>
 
             <!-- Filament Type -->
-            <text v-if="data.text.type" x="1105.34" y="950.001" :style="`font-family:&quot;Inter-Bold&quot;,&quot;Inter&quot;;font-weight:700;font-size:12px;fill:${data.colour.text}`" transform="translate(-16980.334 -14295.626) scale(15.46726)">{{ data.text.type }}</text>
+            <text v-if="data.text.type" x="1105.34" y="950.001" :style="`font-family:&quot;Inter-Bold&quot;,&quot;Inter&quot;;font-weight:700;font-size:${data.sizing.type_font_size}px;fill:${data.colour.text}`" transform="translate(-16980.334 -14295.626) scale(15.46726)">{{ data.text.type }}</text>
 
             <!-- General Info -->
-            <text v-if="data.text.diameter" x="1105.34" y="950.001" :style="`font-family:&quot;Inter-Bold&quot;,&quot;Inter&quot;;font-weight:700;font-size:12px;fill:${data.colour.text}`" transform="translate(-5759.657 -4468.44) scale(5.32225)">Diameter <tspan x="1192.67px 1196.31px 1203.61px" y="950.001px 950.001px 950.001px">: {{ data.text.diameter }}</tspan></text>
-            <text v-if="data.text.length" x="1105.34" y="964.433" :style="`font-family:&quot;Inter-Bold&quot;,&quot;Inter&quot;;font-weight:700;font-size:12px;fill:${data.colour.text}`" transform="translate(-5759.657 -4468.44) scale(5.32225)">Length<tspan x="1192.67px 1196.31px 1203.61px" y="964.433px 964.433px 964.433px">: {{ data.text.length }}</tspan></text>
-            <text v-if="data.text.temp" x="1105.34" y="978.866" :style="`font-family:&quot;Inter-Bold&quot;,&quot;Inter&quot;;font-weight:700;font-size:12px;fill:${data.colour.text}`" transform="translate(-5759.657 -4468.44) scale(5.32225)">Printing Temp<tspan x="1192.67px 1196.31px 1203.61px" y="978.866px 978.866px 978.866px">: {{ data.text.temp }} ºC</tspan></text>
-            <text v-if="data.text.weight" x="1105.34" y="993.298" :style="`font-family:&quot;Inter-Bold&quot;,&quot;Inter&quot;;font-weight:700;font-size:12px;fill:${data.colour.text}`" transform="translate(-5759.657 -4468.44) scale(5.32225)">Net Weight<tspan x="1192.67px 1196.31px 1203.61px" y="993.298px 993.298px 993.298px">: {{ data.text.weight }}</tspan></text>
-            <text v-if="data.text.code" x="1105.34" y="1007.73" :style="`font-family:&quot;Inter-Bold&quot;,&quot;Inter&quot;;font-weight:700;font-size:12px;fill:${data.colour.text}`" transform="translate(-5759.657 -4468.44) scale(5.32225)">Filament Code<tspan x="1192.67px 1196.31px 1203.61px" y="1007.73px 1007.73px 1007.73px">: {{ data.text.code }}</tspan></text>
-            <!-- <text x="1105.34" y="1022.16" style="font-family:&quot;Inter-Medium&quot;,&quot;Inter&quot;;font-weight:500;font-size:12px;fill:{colour_text}" transform="translate(-5759.657 -4468.44) scale(5.32225)">Made In China</text> -->
+            <text v-if="data.text.diameter" x="1105.34" y="950.001" :style="`font-family:&quot;Inter-Bold&quot;,&quot;Inter&quot;;font-weight:700;font-size:${data.sizing.fil_info_font_size}px;fill:${data.colour.text}`" transform="translate(-5759.657 -4468.44) scale(5.32225)">Diameter <tspan x="1192.67px 1196.31px 1203.61px" y="950.001px 950.001px 950.001px">: {{ data.text.diameter }}</tspan></text>
+            <text v-if="data.text.length" x="1105.34" y="964.433" :style="`font-family:&quot;Inter-Bold&quot;,&quot;Inter&quot;;font-weight:700;font-size:${data.sizing.fil_info_font_size}px;fill:${data.colour.text}`" transform="translate(-5759.657 -4468.44) scale(5.32225)">Length<tspan x="1192.67px 1196.31px 1203.61px" y="964.433px 964.433px 964.433px">: {{ data.text.length }}</tspan></text>
+            <text v-if="data.text.temp" x="1105.34" y="978.866" :style="`font-family:&quot;Inter-Bold&quot;,&quot;Inter&quot;;font-weight:700;font-size:${data.sizing.fil_info_font_size}px;fill:${data.colour.text}`" transform="translate(-5759.657 -4468.44) scale(5.32225)">Printing Temp<tspan x="1192.67px 1196.31px 1203.61px" y="978.866px 978.866px 978.866px">: {{ data.text.temp }} ºC</tspan></text>
+            <text v-if="data.text.weight" x="1105.34" y="993.298" :style="`font-family:&quot;Inter-Bold&quot;,&quot;Inter&quot;;font-weight:700;font-size:${data.sizing.fil_info_font_size}px;fill:${data.colour.text}`" transform="translate(-5759.657 -4468.44) scale(5.32225)">Net Weight<tspan x="1192.67px 1196.31px 1203.61px" y="993.298px 993.298px 993.298px">: {{ data.text.weight }}</tspan></text>
+            <text v-if="data.text.code" x="1105.34" y="1007.73" :style="`font-family:&quot;Inter-Bold&quot;,&quot;Inter&quot;;font-weight:700;font-size:${data.sizing.fil_info_font_size}px;fill:${data.colour.text}`" transform="translate(-5759.657 -4468.44) scale(5.32225)">Filament Code<tspan x="1192.67px 1196.31px 1203.61px" y="1007.73px 1007.73px 1007.73px">: {{ data.text.code }}</tspan></text>
+            <!-- <text x="1105.34" y="1022.16" style="font-family:&quot;Inter-Medium&quot;,&quot;Inter&quot;;font-weight:500;font-size:${data.sizing.fil_info_font_size}px;fill:${data.colour.text}" transform="translate(-5759.657 -4468.44) scale(5.32225)">Made In China</text> -->
 
             <!-- Brand Logo -->
             <g :style="`fill:${data.colour.text}`" v-if="logos?.[data.graphics.logo]" v-html="logos?.[data.graphics.logo]"></g>
@@ -73,7 +73,7 @@
             </g>
 
             <!-- Filament Colour Name -->
-            <text v-if="data.text.colour_name" x="1124.25" y="950.001" :style="`font-family:&quot;Inter-Bold&quot;,&quot;Inter&quot;;font-weight:700;font-size:12px;fill:${data.colour.text};text-anchor:middle`" transform="translate(-1208.87 -1854.12) scale(3.11344)">{{ data.text.colour_name }}</text>
+            <text v-if="data.text.colour_name" x="1124.25" y="950.001" :style="`font-family:&quot;Inter-Bold&quot;,&quot;Inter&quot;;font-weight:700;font-size:${data.sizing.fil_colour_name_font_size}px;fill:${data.colour.text};text-anchor:middle`" transform="translate(-1208.87 -1854.12) scale(3.11344)">{{ data.text.colour_name }}</text>
 
             <!-- Filament Colour (Single) -->
             <g v-if="data.extra.colourType === FilamentColourTypes.Single">

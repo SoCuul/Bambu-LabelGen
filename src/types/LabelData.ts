@@ -11,6 +11,12 @@ export default interface LabelData {
         code: string,
         colour_name: string
     },
+    sizing: {
+        brand_font_size: string,
+        type_font_size: string,
+        fil_info_font_size: string,
+        fil_colour_name_font_size: string
+    },
     colour: {
         filament: string,
         filament2: string,
