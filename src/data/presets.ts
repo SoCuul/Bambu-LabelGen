@@ -67,6 +67,22 @@ const presets: { [key: string]: LabelPreset | 'spacer' } = {
         graphics: {
             logo: 'SUNLU'
         }
+    },
+
+    /* Eryone */
+    '  ': 'spacer',
+    '⸻ Eryone ⸻': 'spacer',
+
+    'Eryone TPU 95A': {
+        text: {
+            brand: 'Eryone',
+            type: 'TPU 95A',
+            diameter: '1.75 ± 0.05 mm',
+            temp: '220-250'
+        },
+        graphics: {
+            logo: 'SUNLU'
+        }
     }
 }
 
