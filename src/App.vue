@@ -277,7 +277,15 @@
     </div>
 </template>
 
-<style scoped>
+<style>
+    /* Fix readibility of input fields */
+    input {
+        color: #d0d0d0 !important;
+    }
+    input::placeholder {
+        color: #9ca3af !important;
+    }
+
     .large-card {
         margin: var(--a-card-padding);
 
