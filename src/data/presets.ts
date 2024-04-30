@@ -7,9 +7,7 @@ const presets: { [key: string]: LabelPreset | 'spacer' } = {
             brand: '',
             type: '',
             diameter: '',
-            length: '',
-            temp: '',
-            weight: ''
+            temp: ''
         },
         graphics: {
             logo: 'Bambu Lab'
@@ -25,9 +23,7 @@ const presets: { [key: string]: LabelPreset | 'spacer' } = {
             brand: 'Bambu',
             type: 'PLA Basic',
             diameter: '1.75 ± 0.03 mm',
-            length: '330 m',
-            temp: '190-220',
-            weight: '1 kg'
+            temp: '190-220'
         },
         graphics: {
             logo: 'Bambu Lab'
@@ -38,9 +34,7 @@ const presets: { [key: string]: LabelPreset | 'spacer' } = {
             brand: 'Bambu',
             type: 'PLA Silk',
             diameter: '1.75 ± 0.03 mm',
-            length: '315 m',
-            temp: '210-230',
-            weight: '1 kg'
+            temp: '210-230'
         },
         graphics: {
             logo: 'Bambu Lab'
@@ -51,9 +45,7 @@ const presets: { [key: string]: LabelPreset | 'spacer' } = {
             brand: 'Bambu',
             type: 'PETG Basic',
             diameter: '1.75 ± 0.03 mm',
-            length: '330 m',
-            temp: '230-260',
-            weight: '1 kg'
+            temp: '230-260'
         },
         graphics: {
             logo: 'Bambu Lab'
@@ -70,9 +62,7 @@ const presets: { [key: string]: LabelPreset | 'spacer' } = {
             brand: 'SUNLU',
             type: 'PETG',
             diameter: '1.75 ± 0.02 mm',
-            length: '325 m',
-            temp: '220-250',
-            weight: '1 kg'
+            temp: '220-250'
         },
         graphics: {
             logo: 'SUNLU'
