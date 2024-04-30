@@ -78,10 +78,10 @@ const presets: { [key: string]: LabelPreset | 'spacer' } = {
             brand: 'Eryone',
             type: 'TPU 95A',
             diameter: '1.75 ± 0.05 mm',
-            temp: '220-250'
+            temp: '190-220'
         },
         graphics: {
-            logo: 'SUNLU'
+            logo: 'Eryone'
         }
     }
 }
