@@ -39,6 +39,7 @@
             colour: {
                 filament: '#06AE42',
                 filament2: '#87ceeb',
+                filament3: '#7289DA',
                 text: '#2D2D2D',
                 outline: '#A5AAA9',
                 background: '#FFFFFF'
@@ -219,11 +220,19 @@
                                 <ColourPickerMenu v-model="configData.colour.filament"/>
                             </ABtn>
 
-                            <div v-if="(configData.extra.colourType === FilamentColourTypes.Dual) || (configData.extra.colourType === FilamentColourTypes.DualGradientLinear) || (configData.extra.colourType === FilamentColourTypes.DualGradientRadial) || (configData.extra.colourType === FilamentColourTypes.DualConcentric)">
+                            <div v-if="configData.extra.colourType >= FilamentColourTypes.Dual">
                                 <ABtn variant="light" class="colourpicker-btn" :style="`background: ${configData.colour.filament2}`" appendIcon="" icon="">
                                     Filament Colour 2
 
                                     <ColourPickerMenu v-model="configData.colour.filament2"/>
+                                </ABtn>
+                            </div>
+
+                            <div v-if="configData.extra.colourType >= FilamentColourTypes.Triple">
+                                <ABtn variant="light" class="colourpicker-btn" :style="`background: ${configData.colour.filament3}`" appendIcon="" icon="">
+                                    Filament Colour 3
+
+                                    <ColourPickerMenu v-model="configData.colour.filament3"/>
                                 </ABtn>
                             </div>
 

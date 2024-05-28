@@ -19,12 +19,36 @@
                 <stop offset="50%" :stop-color="data.colour.filament" />
                 <stop offset="50%" :stop-color="data.colour.filament2" />
             </linearGradient>
-            <linearGradient id="filament-colour-gradientlinear" x1="0" x2="0" y1="0" y2="1">
+            
+            <linearGradient id="filament-colour-dual-gradientlinear" x1="0" x2="0" y1="0" y2="1">
                 <stop offset="0%" :stop-color="data.colour.filament" />
                 <stop offset="100%" :stop-color="data.colour.filament2" />
             </linearGradient>
-            <radialGradient id="filament-colour-gradientradial" x1="0" x2="0" y1="0" y2="1">
+
+            <radialGradient id="filament-colour-dual-gradientradial" x1="0" x2="0" y1="0" y2="1">
                 <stop offset="0%" :stop-color="data.colour.filament2" />
+                <stop offset="100%" :stop-color="data.colour.filament" />
+            </radialGradient>
+
+            <!-- Triple colour filament gradients -->
+            <linearGradient id="filament-colour-triple" x1="0" x2="1" y1="0" y2="0">
+                <stop offset="33.3%" :stop-color="data.colour.filament" />
+
+                <stop offset="33.4%" :stop-color="data.colour.filament2" />
+                <stop offset="66.6%" :stop-color="data.colour.filament2" />
+                
+                <stop offset="66.7%" :stop-color="data.colour.filament3" />
+            </linearGradient>
+
+            <linearGradient id="filament-colour-triple-gradientlinear" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0%" :stop-color="data.colour.filament" />
+                <stop offset="50%" :stop-color="data.colour.filament2" />
+                <stop offset="100%" :stop-color="data.colour.filament3" />
+            </linearGradient>
+
+            <radialGradient id="filament-colour-triple-gradientradial" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0%" :stop-color="data.colour.filament3" />
+                <stop offset="50%" :stop-color="data.colour.filament2" />
                 <stop offset="100%" :stop-color="data.colour.filament" />
             </radialGradient>
         </defs>
@@ -117,29 +141,48 @@
                 `"
                 transform="translate(-1208.87 -1854.12) scale(3.11344)">{{ data.text.colour_name }}</text>
 
-            <!-- Filament Colour (Single) -->
-            <g v-if="data.extra.colourType === FilamentColourTypes.Single">
-                <circle cx="2291.47" cy="917.043" r="65.731" :style="`fill: ${data.colour.filament}`" />
-            </g>
-            <!-- Filament Colour (Dual) -->
-            <g v-else-if="data.extra.colourType === FilamentColourTypes.Dual">
-                <circle cx="2291.47" cy="917.043" r="65.731" style="fill: url('#filament-colour-dual')" />
-            </g>
-            <!-- Filament Colour (Dual (Linear Gradient)) -->
-            <g v-else-if="data.extra.colourType === FilamentColourTypes.DualGradientLinear">
-                <circle cx="2291.47" cy="917.043" r="65.731" style="fill: url('#filament-colour-gradientlinear')" />
-            </g>
-            <!-- Filament Colour (Dual (Radial Gradient)) -->
-            <g v-else-if="data.extra.colourType === FilamentColourTypes.DualGradientRadial">
-                <circle cx="2291.47" cy="917.043" r="65.731" style="fill: url('#filament-colour-gradientradial')" />
-            </g>
-            <!-- Filament Colour (Dual (Concentric)) -->
-            <g v-else-if="data.extra.colourType === FilamentColourTypes.DualConcentric">
-                <!-- Outer -->
-                <circle cx="2291.47" cy="917.043" r="65.731" :style="`fill: ${data.colour.filament}`" />
+            <!-- Filament Colour Swatch -->
+            <g>
 
-                <!-- Inner -->
-                <circle cx="2291.47" cy="917.043" r="35.731" :style="`fill: ${data.colour.filament2}`" />
+                <!-- Single -->
+                <g v-if="data.extra.colourType === FilamentColourTypes.Single">
+                    <circle cx="2291.47" cy="917.043" r="65.731" :style="`fill: ${data.colour.filament}`" />
+                </g>
+
+                <!-- Dual -->
+                <g v-else-if="data.extra.colourType === FilamentColourTypes.Dual">
+                    <circle cx="2291.47" cy="917.043" r="65.731" style="fill: url('#filament-colour-dual')" />
+                </g>
+                <!-- Dual (Linear Gradient) -->
+                <g v-else-if="data.extra.colourType === FilamentColourTypes.DualGradientLinear">
+                    <circle cx="2291.47" cy="917.043" r="65.731" style="fill: url('#filament-colour-dual-gradientlinear')" />
+                </g>
+                <!-- Dual (Radial Gradient) -->
+                <g v-else-if="data.extra.colourType === FilamentColourTypes.DualGradientRadial">
+                    <circle cx="2291.47" cy="917.043" r="65.731" style="fill: url('#filament-colour-dual-gradientradial')" />
+                </g>
+                <!-- Dual (Concentric) -->
+                <g v-else-if="data.extra.colourType === FilamentColourTypes.DualConcentric">
+                    <!-- Outer -->
+                    <circle cx="2291.47" cy="917.043" r="65.731" :style="`fill: ${data.colour.filament}`" />
+
+                    <!-- Inner -->
+                    <circle cx="2291.47" cy="917.043" r="35.731" :style="`fill: ${data.colour.filament2}`" />
+                </g>
+
+                <!-- Dual -->
+                <g v-else-if="data.extra.colourType === FilamentColourTypes.Triple">
+                    <circle cx="2291.47" cy="917.043" r="65.731" style="fill: url('#filament-colour-triple')" />
+                </g>
+                <!-- Triple (Linear Gradient) -->
+                <g v-else-if="data.extra.colourType === FilamentColourTypes.TripleGradientLinear">
+                    <circle cx="2291.47" cy="917.043" r="65.731" style="fill: url('#filament-colour-triple-gradientlinear')" />
+                </g>
+                <!-- Triple (Radial Gradient) -->
+                <g v-else-if="data.extra.colourType === FilamentColourTypes.TripleGradientRadial">
+                    <circle cx="2291.47" cy="917.043" r="65.731" style="fill: url('#filament-colour-triple-gradientradial')" />
+                </g>
+
             </g>
         </g>
 

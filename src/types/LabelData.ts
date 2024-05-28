@@ -20,6 +20,7 @@ export default interface LabelData {
     colour: {
         filament: string,
         filament2: string,
+        filament3: string,
         text: string,
         outline: string,
         background: string
