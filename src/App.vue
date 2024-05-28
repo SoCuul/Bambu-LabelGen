@@ -266,14 +266,7 @@
             <GeneratedLabel v-model:data="configData" height="245" />
             
             <div class="mt-2">
-                <ABtn color="success" variant="fill" @click="downloadLabel" class="text-lg labelpreview-btn mr-7" appendIcon="" icon="">
-                    <!-- Download formats -->
-                    <!-- <AMenu>
-                        <AList/>
-                    </AMenu> -->
-                    
-                    Download Label
-                </ABtn>
+                <ABtn color="success" variant="fill" @click="downloadLabel" class="text-lg labelpreview-btn mr-7" appendIcon="" icon="">Download Label</ABtn>
                 <ABtn color="info" variant="fill" @click="copyLink" class="text-lg labelpreview-btn" appendIcon="" icon="">Copy Link</ABtn>
             </div>
         </div>
