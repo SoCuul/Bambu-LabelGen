@@ -73,6 +73,17 @@ const presets: { [key: string]: LabelPreset | 'spacer' } = {
     '  ': 'spacer',
     '⸻ Eryone ⸻': 'spacer',
 
+    'Eryone PLA Silk': {
+        text: {
+            brand: 'Eryone',
+            type: 'PLA Silk',
+            diameter: '1.75 ± 0.03 mm',
+            temp: '190-220'
+        },
+        graphics: {
+            logo: 'Eryone'
+        }
+    },
     'Eryone TPU 95A': {
         text: {
             brand: 'Eryone',
