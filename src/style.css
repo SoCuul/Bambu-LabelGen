@@ -4,7 +4,10 @@ body {
     --global-outline: #A5AAA9;
     --global-accent: #06AE42;
     --global-lighterGrey: #54555F;
+
     --global-cardBg: #18181b;
+    --global-cardText: #d0d0d0;
+    --global-cardInputText: #9ca3af;
 }
 
 /* Customize toasts background */

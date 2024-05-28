@@ -282,10 +282,10 @@
 <style>
     /* Fix readibility of input fields */
     input {
-        color: #d0d0d0 !important;
+        color: var(--global-cardText) !important;
     }
     input::placeholder {
-        color: #9ca3af !important;
+        color: var(--global-cardInputText) !important;
     }
 
     .large-card {
@@ -296,7 +296,7 @@
     }
 
     .option-card-title {
-        color: lightGrey;
+        color: var(--global-cardText) !important;
     }
 
     .colourpicker-btn {
