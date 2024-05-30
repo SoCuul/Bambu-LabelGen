@@ -64,7 +64,7 @@
                 :style="`
                     font-family: 'Inter-Bold', 'Inter';
                     font-weight: 700;
-                    font-size: ${12 * (Number(data.sizing.type_font_percent) / 100)}px;
+                    font-size: ${12 * (Number(data.sizing.brand_font_percent) / 100)}px;
                     fill: ${data.colour.text}
                 `"
                 transform="translate(-6024.82 -5079.143) scale(5.56281)">{{ data.text.brand }}</text>
