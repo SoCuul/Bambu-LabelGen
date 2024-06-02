@@ -69,8 +69,24 @@ const presets: { [key: string]: LabelPreset | 'spacer' } = {
         }
     },
 
-    /* Eryone */
+    /* JAYO */
     '  ': 'spacer',
+    '⸻ JAYO ⸻': 'spacer',
+
+    'JAYO PLA+': {
+        text: {
+            brand: 'JAYO',
+            type: 'PLA+',
+            diameter: '1.75 ± 0.02 mm',
+            temp: '210-235'
+        },
+        graphics: {
+            logo: 'JAYO'
+        }
+    },
+
+    /* Eryone */
+    '   ': 'spacer',
     '⸻ Eryone ⸻': 'spacer',
 
     'Eryone PLA Silk': {
