@@ -57,6 +57,17 @@ const presets: { [key: string]: LabelPreset | 'spacer' } = {
     ' ': 'spacer',
     '⸻ SUNLU ⸻': 'spacer',
 
+    'SUNLU PLA Matte': {
+        text: {
+            brand: 'SUNLU',
+            type: 'PLA Matte',
+            diameter: '1.75 ± 0.02 mm',
+            temp: '190-220'
+        },
+        graphics: {
+            logo: 'SUNLU'
+        }
+    },
     'SUNLU PETG': {
         text: {
             brand: 'SUNLU',
