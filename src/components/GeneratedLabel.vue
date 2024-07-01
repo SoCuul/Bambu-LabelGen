@@ -41,9 +41,9 @@
             </linearGradient>
 
             <linearGradient id="filament-colour-triple-gradientlinear" x1="0" x2="0" y1="0" y2="1">
-                <stop offset="0%" :stop-color="data.colour.filament" />
+                <stop offset="20%" :stop-color="data.colour.filament" />
                 <stop offset="50%" :stop-color="data.colour.filament2" />
-                <stop offset="100%" :stop-color="data.colour.filament3" />
+                <stop offset="80%" :stop-color="data.colour.filament3" />
             </linearGradient>
 
             <radialGradient id="filament-colour-triple-gradientradial" x1="0" x2="0" y1="0" y2="1">
