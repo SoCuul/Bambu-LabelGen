@@ -11,32 +11,33 @@
   },
   "dependencies": {
     "@anu-vue/preset-theme-default": "^0.15.2",
-    "@iconify-json/bx": "^1.1.10",
-    "@iconify-json/oui": "^1.1.2",
+    "@iconify-json/bx": "^1.2.2",
+    "@iconify-json/oui": "^1.2.4",
     "anu-vue": "^0.15.2",
     "canvg": "^4.0.2",
     "jsurl": "^0.1.5",
     "lodash.merge": "^4.6.2",
     "unocss": "^0.58.9",
-    "vue": "^3.4.27",
+    "vue": "^3.5.13",
     "vue-color-kit": "^1.0.6",
-    "vue3-toastify": "^0.2.1"
+    "vue3-toastify": "^0.2.8"
   },
   "devDependencies": {
     "@types/jsurl": "^0.1.2",
     "@types/lodash.merge": "^4.6.9",
-    "@types/node": "^20.12.12",
-    "@typescript-eslint/eslint-plugin": "^7.11.0",
-    "@typescript-eslint/parser": "^7.11.0",
-    "@vitejs/plugin-vue": "^5.0.4",
+    "@types/node": "^20.17.19",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "@vitejs/plugin-vue": "^5.2.1",
     "@vue/eslint-config-typescript": "^12.0.0",
-    "eslint": "^8.57.0",
-    "eslint-plugin-vue": "^9.26.0",
-    "type-fest": "^4.18.3",
-    "typescript": "^5.4.5",
+    "eslint": "^8.57.1",
+    "eslint-plugin-vue": "^9.32.0",
+    "type-fest": "^4.35.0",
+    "typescript": "^5.7.3",
     "unplugin-vue-components": "^0.26.0",
-    "vite": "^5.2.11",
+    "vite": "^6.2.0",
     "vite-svg-loader": "^5.1.0",
-    "vue-tsc": "^2.0.19"
-  }
+    "vue-tsc": "^2.2.4"
+  },
+  "packageManager": "pnpm@9.10.0+sha512.73a29afa36a0d092ece5271de5177ecbf8318d454ecd701343131b8ebc0c1a91c487da46ab77c8e596d6acf1461e3594ced4becedf8921b074fbd8653ed7051c"
 }
