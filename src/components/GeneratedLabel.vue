@@ -113,23 +113,23 @@
 
         <!-- Spool Info -->
         <g transform="translate(-2288.122 -1207.29) scale(1.68735)">
+            <!-- Inner Ring -->
+            
             <!-- Basic Spool -->
             <g v-if="data.extra.showSpool">
                 <!-- Outer Ring -->
                 <circle cx="2291.47" cy="917.043" r="65.731" 
-                    :style="`fill: ${data.colour.outline}`" transform="translate(-2469.49 -988.288) scale(2.07769)" />
-
+                :style="`fill: ${data.colour.outline}`" transform="translate(-2469.49 -988.288) scale(2.07769)" />
+                
                 <!-- Spool Background -->
                 <circle cx="2291.47" cy="917.043" r="65.731" :style="`fill: ${data.colour.background}`" transform="translate(-2162.23 -865.325) scale(1.9436)" />
-
-                <!-- Inner Ring -->
-                <circle cx="2291.47" cy="917.043" r="65.731" :style="`fill: ${data.colour.outline}`" transform="translate(-306.417 -122.628) scale(1.13372)" />
-
+                
                 <!-- Labels -->
                 <path d="M2464.41 875.54v1.958c0 3.696-3.31 6.696-7.39 6.696h-31.32c-4.08 0-7.39-3-7.39-6.696v-1.958c0-3.696 3.31-6.696 7.39-6.696h31.32c4.08 0 7.39 3 7.39 6.696Z" :style="`fill: ${data.colour.outline}`" transform="matrix(.59508 0 0 .65685 936.963 341.305)" />
                 <path d="M2298.25 1049.34v11.14c0 1.45-1.22 2.63-2.71 2.63h-64.1c-1.5 0-2.72-1.18-2.72-2.63v-11.14c0-1.45 1.22-2.63 2.72-2.63h64.1c1.49 0 2.71 1.18 2.71 2.63Z" :style="`fill: ${data.colour.outline}`" transform="matrix(.60824 0 0 .6273 914.723 360.705)" />
             </g>
-
+            <circle v-if="data.extra.showColourRing" cx="2291.47" cy="917.043" r="65.731" :style="`fill: ${data.colour.outline}`" transform="translate(-306.417 -122.628) scale(1.13372)" />
+            
             <!-- Filament Colour Name -->
             <text v-if="data.text.colour_name" x="1124.25" y="950.001"
                 :style="`

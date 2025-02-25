@@ -30,6 +30,7 @@ export default interface LabelData {
     },
     extra: {
         colourType: FilamentColourTypes,
-        showSpool: boolean
+        showSpool: boolean,
+        showColourRing: boolean
     }
 }

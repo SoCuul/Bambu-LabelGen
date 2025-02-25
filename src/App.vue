@@ -49,7 +49,8 @@
             },
             extra: {
                 colourType: FilamentColourTypes.Single,
-                showSpool: true
+                showSpool: true,
+                showColourRing: true
             }
         } as LabelDataType
     )
@@ -181,6 +182,8 @@
                         <!-- Card Body - Section 3 -->
                         <div class="grid-row sm:grid-cols-2 place-items-stretch !mt-5">
                             <ACheckbox color="accent" label="Display spool icon around colour" v-model="configData.extra.showSpool" checked-value=""></ACheckbox>
+                            
+                            <ACheckbox color="accent" label="Display ring around colour" v-model="configData.extra.showColourRing" checked-value=""></ACheckbox>
                         </div>
                         
                     </div>
