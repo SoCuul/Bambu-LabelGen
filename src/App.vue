@@ -159,7 +159,7 @@
                         <div class="grid-row sm:grid-cols-2 place-items-stretch !mb-5">
                             <AInput type="text" label="Diameter" placeholder="Eg. 1.75 ± 0.03mm" v-model="configData.text.diameter" inputWrapperAttrs=""></AInput>
                             
-                            <AInput type="text" label="Length" placeholder="Eg .330m" v-model="configData.text.length" inputWrapperAttrs=""></AInput>
+                            <AInput type="text" label="Length" placeholder="Eg. 330m" v-model="configData.text.length" inputWrapperAttrs=""></AInput>
                             
                             <AInput type="text" label="Temp" placeholder="Eg. 190-220" v-model="configData.text.temp" inputWrapperAttrs=""></AInput>
                             
